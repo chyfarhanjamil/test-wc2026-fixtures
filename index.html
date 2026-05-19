@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FIFA World Cup 2026 Full Fixture Viewer — all 104 matches from Group Stage to Final, in Bangladesh time.">
-  <meta name="keywords" content="FIFA World Cup 2026, fixtures, football, soccer, Bangladesh time, knockout stage">
+  <meta name="description" content="FIFA World Cup 2026 Full Fixture Viewer — all 104 matches from Group Stage to Final, in your timezone.">
+  <meta name="keywords" content="FIFA World Cup 2026, fixtures, football, soccer, timezone, knockout stage">
   <meta property="og:title" content="FIFA World Cup 2026 Fixtures">
-  <meta property="og:description" content="Interactive full-tournament fixture viewer for World Cup 2026 — Group Stage through Final, in Bangladesh time.">
+  <meta property="og:description" content="Interactive full-tournament fixture viewer for World Cup 2026 — Group Stage through Final, in any timezone.">
   <title>FIFA World Cup 2026 – Full Fixtures</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,18 +18,35 @@
 <header>
   <div class="year-badge">2026</div>
   <h1>⚽ FIFA WORLD CUP 2026</h1>
-  <p>All 104 Matches · Group Stage to Final · Bangladesh Time</p>
+  <p id="headerSub">All 104 Matches · Group Stage to Final · Bangladesh Time</p>
 </header>
 
 <!-- ── Controls ────────────────────────────────────────────────────────── -->
 <div class="controls">
-  <div class="search-wrap">
-    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-    </svg>
-    <input type="text" id="search"
-           placeholder="Search team (e.g. Brazil, France, USA…)"
-           oninput="App.onSearch()">
+  <div class="controls-top-row">
+    <!-- Search -->
+    <div class="search-wrap">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="search"
+             placeholder="Search team (e.g. Brazil, France, USA…)"
+             oninput="App.onSearch()">
+    </div>
+
+    <!-- Timezone selector -->
+    <div class="tz-selector-wrap" id="tzSelectorWrap">
+      <label class="tz-label" for="tzSelect">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span>Timezone</span>
+      </label>
+      <select id="tzSelect" class="tz-select">
+        <!-- populated by app.js -->
+      </select>
+    </div>
   </div>
 
   <!-- Mode buttons -->
