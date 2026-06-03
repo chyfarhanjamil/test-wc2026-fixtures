@@ -2,8 +2,7 @@
 
 Interactive viewer for all **104 matches** — Group Stage through the Final — in Bangladesh Time (BST, UTC+6).
 
-## 🔴 Live Site
-👉 [View on GitHub Pages](https://chyfarhanjamil.github.io/test-wc2026-fixtures/)
+## 🔴 [Live Site](https://chyfarhanjamil.github.io/test-wc2026-fixtures/)
 
 ## ✨ Features
 - All 48 teams across Groups A–L (Group Stage)
